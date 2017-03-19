@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+	// Return books
 	find: function(req, res) {
 		Book.find({
 			limit: 20,
@@ -13,6 +14,20 @@ module.exports = {
 		}).exec(function(err,docs) {
 			return res.view('books/index', {books: docs});
 		});
+	},
+
+	// Show book by id
+	findOne:function (req, res) {
+		Book.findOne({id: req.params.id}).exec( function (err, book) {
+			if (err) alert.message( "Se cometio un error" + err );
+			return res.view('books/show', { book: book } )
+		});
+
+	},
+
+	// Create a new book
+	new: function (req, res) {
+		return res.view('books/new')
 	}
 };
 

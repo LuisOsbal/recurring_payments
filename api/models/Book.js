@@ -15,7 +15,7 @@ module.exports = {
   	description:{
   		type: "string"
   	},
-  	page:{
+  	pages:{
   		type: "integer"
   	},
   	publishedAt:{

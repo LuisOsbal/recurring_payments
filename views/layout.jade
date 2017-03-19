@@ -32,9 +32,10 @@ html
     // STYLES
     link(rel="stylesheet", href="/styles/bootstrap.css")
     link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/style.css")
     // STYLES END
 
-    block styles
+  block styles
 
   body
     nav.navbar.navbar-default
@@ -50,7 +51,8 @@ html
           ul.nav.navbar-nav
             li
               a(href="/book") Ultimos libros
-    block body
+    .container
+      block body
 
     //-
       Client-side Templates

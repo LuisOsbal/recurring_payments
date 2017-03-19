@@ -1,0 +1,18 @@
+body {
+	background: #FAFAFA;
+}
+
+.card {
+	background: #FFF;
+	padding: 10px 15px;
+	box-shadow: 0 5px 12px rgba(0,0,0,0.54);
+	margin: 10px 0px;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.large-padding {
+	padding: 10px 15px;
+}
