@@ -22,12 +22,27 @@ module.exports = {
 			if (err) alert.message( "Se cometio un error" + err );
 			return res.view('books/show', { book: book } )
 		});
-
 	},
 
 	// Create a new book
 	new: function (req, res) {
 		return res.view('books/new')
+	},
+
+	// Edit book by id
+	edit: function (req, res) {
+		Book.findOne({id: req.params.id}).exec( function (err, book) {
+			if (err) alert.message( "Se cometio un error" + err );
+			return res.view('books/edit', { book: book } )
+		})
+	},
+
+	// Delete book by id
+	delete: function (req, res) {
+		Book.findOne({id: req.params.id}).exec( function (err, book) {
+			if (err) alert.message( "Se cometio un error" + err );
+			return res.view('books/delete', { book: book } )
+		})
 	}
 };
 
